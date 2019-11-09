@@ -37,6 +37,8 @@
             this.btnYarisiBaslat = new System.Windows.Forms.Button();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.lblFinishCizgisi = new System.Windows.Forms.Label();
+            this.lblBilgilendirme = new System.Windows.Forms.Label();
+            this.btnSifirla = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pc3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pc2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pc1)).BeginInit();
@@ -113,12 +115,37 @@
             this.lblFinishCizgisi.Size = new System.Drawing.Size(10, 600);
             this.lblFinishCizgisi.TabIndex = 3;
             // 
+            // lblBilgilendirme
+            // 
+            this.lblBilgilendirme.AutoSize = true;
+            this.lblBilgilendirme.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBilgilendirme.ForeColor = System.Drawing.Color.White;
+            this.lblBilgilendirme.Location = new System.Drawing.Point(31, 22);
+            this.lblBilgilendirme.Name = "lblBilgilendirme";
+            this.lblBilgilendirme.Size = new System.Drawing.Size(0, 25);
+            this.lblBilgilendirme.TabIndex = 4;
+            // 
+            // btnSifirla
+            // 
+            this.btnSifirla.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSifirla.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSifirla.ForeColor = System.Drawing.Color.White;
+            this.btnSifirla.Location = new System.Drawing.Point(997, 12);
+            this.btnSifirla.Name = "btnSifirla";
+            this.btnSifirla.Size = new System.Drawing.Size(401, 67);
+            this.btnSifirla.TabIndex = 5;
+            this.btnSifirla.Text = "Yarışı Sıfırla";
+            this.btnSifirla.UseVisualStyleBackColor = true;
+            this.btnSifirla.Click += new System.EventHandler(this.btnSifirla_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.ClientSize = new System.Drawing.Size(1817, 725);
+            this.Controls.Add(this.btnSifirla);
+            this.Controls.Add(this.lblBilgilendirme);
             this.Controls.Add(this.lblFinishCizgisi);
             this.Controls.Add(this.btnYarisiBaslat);
             this.Controls.Add(this.pc3);
@@ -132,6 +159,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pc2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pc1)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -145,6 +173,8 @@
         private System.Windows.Forms.Button btnYarisiBaslat;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Label lblFinishCizgisi;
+        private System.Windows.Forms.Label lblBilgilendirme;
+        private System.Windows.Forms.Button btnSifirla;
     }
 }
 

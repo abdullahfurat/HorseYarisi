@@ -28,7 +28,19 @@ namespace WFA_HorseYarisi
             pc1.Left += rnd.Next(1, 20);
             pc2.Left += rnd.Next(1, 20);
             pc3.Left += rnd.Next(1, 20);
-        
+
+            if (pc1.Right > pc2.Right && pc1.Right > pc3.Right)
+            {
+                lblBilgilendirme.Text = "Yarışı 1. Kulvardaki ŞahBatur Önde Götürüyor";
+            }
+            else if (pc2.Right > pc1.Right && pc2.Right > pc3.Right)
+            {
+                lblBilgilendirme.Text = "Yarışı 2. Kulvardaki GülBatur Önde Götürüyor";
+            }
+            else if (pc3.Right > pc1.Right && pc3.Right > pc2.Right)
+            {
+                lblBilgilendirme.Text = "Yarışı 3. Kulvardaki CanBatur Önde Götürüyor";
+            }
 
             if (pc1.Right >= lblFinishCizgisi.Left && pc1.Right > pc2.Right && pc1.Right > pc3.Right)
             {
@@ -53,6 +65,13 @@ namespace WFA_HorseYarisi
             // 4) Oyun setup haline getirilecek :D
 
 
+        }
+
+        private void btnSifirla_Click(object sender, EventArgs e)
+        {
+            timer1.Stop();
+            pc1.Left = pc2.Left = pc3.Left = 0;
+            lblBilgilendirme.Text = "";
         }
     }
 }
